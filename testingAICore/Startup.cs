@@ -20,7 +20,7 @@ namespace testingAICore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddApplicationInsightsTelemetry("c7e7965e-c616-429d-98ba-ade08596b280");
+            services.AddApplicationInsightsTelemetry("your instrumentation key");
             services.AddSingleton<ITelemetryModule, FileDiagnosticsTelemetryModule>();
             services.ConfigureTelemetryModule<FileDiagnosticsTelemetryModule>((module, options) => {
                 module.LogFilePath = "C:\\SDKLOGS";
